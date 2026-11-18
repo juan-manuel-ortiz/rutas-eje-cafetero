@@ -31,14 +31,14 @@ cuando puse estilos antes de bootstrap los botones volvieron a verse azules y se
 
 **Consulté:** _enlace(s)_ → _qué encontré_
 
-1. **Explica:** ¿qué relación hay entre `data-bs-target="#menu"` en el botón y el `id="menu"` del div? ¿Quién lee ese atributo?
-   _Tu respuesta_
+1. **Explica:** ¿qué relación hay entre `data-bs-target="#menu"` en el botón y el `id="menu"` del div? ¿Quién lee ese atributo?  
+el data-bs-target busca el elemento que tenga id="menu" y bootstrap es el que lee eso para abrir o cerrar el menu
 
-2. **Experimenta:** abre y cierra el menú en un ancho de celular y observa en DevTools el atributo `aria-expanded` del botón. ¿Qué pasa con su valor? ¿Para quién es útil esa información?
-   _Tu respuesta_
+2. **Experimenta:** abre y cierra el menú en un ancho de celular y observa en DevTools el atributo `aria-expanded` del botón. ¿Qué pasa con su valor? ¿Para quién es útil esa información?  
+cuando esta cerrado sale false y cuando lo abro cambia a true sirve para sabe si el menu esta abierto o cerrado
 
-3. **¿Qué pasaría si…** en un botón de filtro escribes `data-tipo="café"` (con tilde)? Piensa en lo que hay en `datos.js` antes de responder.
-   _Tu respuesta_
+3. **¿Qué pasaría si…** en un botón de filtro escribes `data-tipo="café"` (con tilde)? Piensa en lo que hay en `datos.js` antes de responder.  
+no filtraria bien porque en datos.js esta guardado como cafe sin tilde
 
 ---
 
@@ -47,24 +47,26 @@ cuando puse estilos antes de bootstrap los botones volvieron a verse azules y se
 **Consulté:** _enlace(s)_ → _qué encontré_
 
 1. **Predice y comprueba:** antes de ejecutarlas en la consola del navegador, escribe qué crees que devuelve cada línea. Después ejecútalas y anota el resultado real.
-   ```js
-   [1, 2, 3].map((n) => n * 10)
-   ['a', 'b', 'c'].join('')
-   ['a', 'b', 'c'].join(' - ')
-   rutas.map((r) => r.nombre).length
-   ```
-   | Línea | Mi predicción | Resultado real |
-   |---|---|---|
-   | 1 | | |
-   | 2 | | |
-   | 3 | | |
-   | 4 | | |
 
-2. **Experimenta y explica:** quita temporalmente `.join('')` de `pintarRutas`. ¿Qué aparece entre las tarjetas y por qué? (Pista: ¿qué hace `innerHTML` cuando le asignas un arreglo?). Vuelve a ponerlo.
-   _Tu respuesta_
+```js
+[1, 2, 3].map((n) => n * 10)
+['a', 'b', 'c'].join('')
+['a', 'b', 'c'].join(' - ')
+rutas.map((r) => r.nombre).length
+```
 
-3. **Explica:** ¿por qué la tarjeta se escribe con comillas invertidas `` ` `` y no con comillas simples `' '`? ¿Qué hace `${ }`?
-   _Tu respuesta_
+| Línea | Mi predicción | Resultado real |
+|---|---|---|
+| 1 | `[10, 20, 30]` | `[10, 20, 30]` |
+| 2 | `abc` | `abc` |
+| 3 | `a - b - c` | `a - b - c` |
+| 4 | `11` | `11` |
+
+2. **Experimenta y explica:** quita temporalmente `.join('')` de `pintarRutas`. ¿Qué aparece entre las tarjetas y por qué? (Pista: ¿qué hace `innerHTML` cuando le asignas un arreglo?). Vuelve a ponerlo.  
+aparecen comas entre las tarjetas porque map devuelv un arreglo y sin el join queda separado por comas
+
+3. **Explica:** ¿por qué la tarjeta se escribe con comillas invertidas `` ` `` y no con comillas simples `' '`? ¿Qué hace `${ }`?  
+porque las comillas invertidas dejan escribir varias lineas y meter datos dentro del texto con `${ }`
 
 ---
 
@@ -72,14 +74,14 @@ cuando puse estilos antes de bootstrap los botones volvieron a verse azules y se
 
 **Consulté:** _enlace(s)_ → _qué encontré_
 
-1. **Predice y comprueba:** después de ejecutar `filtrarPorTipo(rutas, 'cafe')` en la consola, ¿cuánto vale `rutas.length`? ¿Por qué?
-   _Tu respuesta_
+1. **Predice y comprueba:** después de ejecutar `filtrarPorTipo(rutas, 'cafe')` en la consola, ¿cuánto vale `rutas.length`? ¿Por qué?  
+sigue valiendo 11 porque el filtro crea otro arreglo y no cambia el original
 
-2. **Explica el recorrido:** describe paso a paso qué pasa desde que la persona hace clic en el botón "Cultura" hasta que aparecen las tarjetas nuevas. Menciona: el evento, `estado`, `aplicarFiltros()`, `filtrarPorTipo()` y `pintarRutas()`.
-   _Tu respuesta_
+2. **Explica el recorrido:** describe paso a paso qué pasa desde que la persona hace clic en el botón "Cultura" hasta que aparecen las tarjetas nuevas. Menciona: el evento, `estado`, `aplicarFiltros()`, `filtrarPorTipo()` y `pintarRutas()`.  
+al darle clic se activa el evento y estado cambia a cultura luego aplicarFiltros usa filtrarPorTipo y al final pintarRutas muestra las tarjetas
 
-3. **¿Qué pasaría si…** usas el evento `'change'` en lugar de `'input'` en el buscador? Pruébalo y describe la diferencia.
-   _Tu respuesta_
+3. **¿Qué pasaría si…** usas el evento `'change'` en lugar de `'input'` en el buscador? Pruébalo y describe la diferencia.  
+con input busca mientras voy escribiendo pero con change toca terminar de escribir para que haga el cambio
 
 ---
 
@@ -87,11 +89,11 @@ cuando puse estilos antes de bootstrap los botones volvieron a verse azules y se
 
 **Consulté:** _enlace(s)_ → _qué encontré_
 
-1. **Explica:** ¿por qué `ordenarRutas` hace `const copia = [...lista]` antes de `sort()`? ¿Qué le pasaría a `rutas` si no se copia? ¿Qué prueba tuya lo demuestra?
-   _Tu respuesta_
+1. **Explica:** ¿por qué `ordenarRutas` hace `const copia = [...lista]` antes de `sort()`? ¿Qué le pasaría a `rutas` si no se copia? ¿Qué prueba tuya lo demuestra?  
+   porque sort() cambia el arreglo si no hago la copia tambien cambiaria rutas y la prueba de no modificar la lista original lo detecta
 
-2. **Explica:** en `copia.sort((a, b) => a.precio - b.precio)`, ¿qué significa que la función devuelva un número negativo, cero o positivo?
-   _Tu respuesta_
+2. **Explica:** en `copia.sort((a, b) => a.precio - b.precio)`, ¿qué significa que la función devuelva un número negativo, cero o positivo?  
+   negativo pone a primero cero los deja igual y positivo pone b primero
 
-3. **Tus pruebas:** elige una de tus pruebas y explica qué error de programación detectaría si alguien dañara la función.
-   _Tu respuesta_
+3. **Tus pruebas:** elige una de tus pruebas y explica qué error de programación detectaría si alguien dañara la función.  
+   la prueba de la lista original detectaria si alguien usa sort() directamente y cambia rutas
