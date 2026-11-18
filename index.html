@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
   <!-- Nuestro CSS va DESPUÉS de Bootstrap para poder sobrescribirlo -->
   <link href="css/estilos.css" rel="stylesheet">
 </head>
+
 <body>
   <a class="visually-hidden-focusable" href="#contenido">Saltar al contenido</a>
 
@@ -16,6 +18,24 @@
     <nav class="navbar navbar-expand-md navbar-eje" data-bs-theme="dark" aria-label="Principal">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">Rutas del Eje</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#rutas">Rutas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
 
         <!-- TODO G2.1 - Completa la navbar (documentación: getbootstrap.com/docs/5.3/components/navbar):
              1. Un <button class="navbar-toggler" type="button"> con:
@@ -35,7 +55,8 @@
     <section class="hero-eje py-5">
       <div class="container py-md-4">
         <h1 class="display-5 fw-bold">Descubre el Eje Cafetero</h1>
-        <p class="lead col-lg-7">Palmas de cera, fincas cafeteras, termales y pueblos de bahareque en Caldas, Risaralda y Quindío.</p>
+        <p class="lead col-lg-7">Palmas de cera, fincas cafeteras, termales y pueblos de bahareque en Caldas, Risaralda
+          y Quindío.</p>
         <a class="btn btn-primary btn-lg" href="#rutas">Ver rutas</a>
       </div>
     </section>
@@ -48,7 +69,18 @@
         <div class="col-lg-6">
           <div class="btn-group flex-wrap" role="group" aria-label="Filtrar por tipo de ruta">
             <!-- Ejemplo resuelto -->
-            <button type="button" class="btn btn-outline-primary active" data-tipo="todos" aria-pressed="true">Todas</button>
+            <button type="button" class="btn btn-outline-primary active" data-tipo="todos"
+              aria-pressed="true">Todas</button>
+            <button class="btn btn-outline-primary" type="button" data-tipo="naturaleza"
+              aria-pressed="false">Naturaleza</button>
+
+            <button class="btn btn-outline-primary" type="button" data-tipo="cultura"
+              aria-pressed="false">Cultura</button>
+
+            <button class="btn btn-outline-primary" type="button" data-tipo="cafe" aria-pressed="false">Café</button>
+
+            <button class="btn btn-outline-primary" type="button" data-tipo="aventura"
+              aria-pressed="false">Aventura</button>
 
             <!-- TODO G2.2 - Agrega 4 botones iguales al de arriba, SIN la clase active y con aria-pressed="false":
                  data-tipo="naturaleza" (Naturaleza), "cultura" (Cultura), "cafe" (Café), "aventura" (Aventura)
@@ -99,7 +131,8 @@
   <footer id="contacto" class="pie-eje text-white py-4">
     <div class="container">
       <p class="mb-1 fw-bold">Rutas del Eje</p>
-      <address class="mb-0">Pereira, Risaralda · <a class="link-light" href="mailto:hola@rutasdeleje.co">hola@rutasdeleje.co</a></address>
+      <address class="mb-0">Pereira, Risaralda · <a class="link-light"
+          href="mailto:hola@rutasdeleje.co">hola@rutasdeleje.co</a></address>
     </div>
   </footer>
 
@@ -108,4 +141,5 @@
   <script src="js/datos.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
