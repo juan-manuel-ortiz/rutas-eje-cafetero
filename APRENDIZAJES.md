@@ -6,22 +6,24 @@
 >
 > Este archivo forma parte de la calificación del reto (criterio *Comprensión*).
 
-**Aprendiz:** _tu nombre_
+**Aprendiz:** Juan Manuel Ortiz Mena
 
 ---
 
 ## Issue #1 · G1 Guía de estilo
 
-**Consulté:** _enlace(s)_ → _qué encontré_
+**Consulté:** https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties → como se crean variables en :root y como se usan con var()
+https://getbootstrap.com/docs/5.3/components/buttons/#variables → las variables --bs-btn-* que utiliza Bootstrap para los botones
+https://webaim.org/resources/contrastchecker/ → como comprobar el contraste entre los colores
 
-1. **Explica:** ¿qué ventaja tiene escribir los colores como variables en `:root` en vez de escribir el hex directamente en cada regla?
-   _Tu respuesta_
+1. **Explica:** ¿qué ventaja tiene escribir los colores como variables en `:root`  en vez de escribir el hex directamente en cada regla?
+usar variables en root permite guardar los colores en un solo lugar y reutilizarlos en varias partes de la página por si  después quiero cambiar un color, solo modifico la variable y no tengo que buscar el mismo codigo hexadecimal en todo el CSS
 
 2. **Experimenta y explica:** en DevTools selecciona el botón "Ver rutas", pestaña *Computed* (o *Calculado*) y busca `--bs-btn-bg`. ¿De dónde sale su valor? ¿Por qué cambiar `--bs-primary` no habría cambiado el color del botón?
-   _Tu respuesta_
+En devtools vi que --bs-btn-bg tenía el valor #1f5f3a que viene de --eje-primario, cambiar solamente --bs-primary no bastaría porque el componente del boton usa sus propias variables --bs-btn-* para definir sus colores
 
 3. **¿Qué pasaría si…** enlazas `estilos.css` ANTES de `bootstrap.min.css` en el `<head>`? Pruébalo, describe lo que ves y vuelve a dejarlo como estaba.
-   _Tu respuesta_
+cuando puse estilos antes de bootstrap los botones volvieron a verse azules y se perdieron varias personalzacions que habia hecho
 
 ---
 

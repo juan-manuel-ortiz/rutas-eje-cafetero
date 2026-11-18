@@ -18,11 +18,11 @@ y se pueden filtrar por tipo y buscar por nombre o municipio.
 ## Guía de estilo
 | Token | Valor | Uso | Contraste |
 |---|---|---|---|
-| `--eje-primario` | `#1f5f3a` | Botones y acentos | Blanco encima: _x_:1 |
-| `--eje-secundario` | _completa_ | Navbar y pie | Blanco encima: _x_:1 |
+| `--eje-primario` | `#1f5f3a` | Botones y acentos | Blanco encima: 7.6:1 |
+| `--eje-secundario` | `#243447` | Navbar y pie | Blanco encima: 12.7:1 |
 | `--eje-fondo` | `#faf6ee` | Fondo de la página | - |
-| `--eje-texto` | _completa_ | Texto general | Sobre el fondo: _x_:1 |
-| `--eje-fuente` | _completa_ | Toda la página | - |
+| `--eje-texto` | `#2b2b2b` | Texto general | Sobre el fondo: 13.1:1 |
+| `--eje-fuente` | `"Segoe UI", system-ui, sans-serif` | Toda la página | - |
 
 ## Cómo verificar
 ```bash
