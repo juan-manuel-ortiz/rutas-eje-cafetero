@@ -19,5 +19,43 @@ const { rutas } = require('../js/datos.js');
 const { ordenarRutas } = require('../js/app.js');
 
 describe('RETO · ordenarRutas(lista, criterio)', () => {
-  // Tus pruebas aquí
+  test('ordena las rutas por nombre', () => {
+    const resultado = ordenarRutas(rutas, 'nombre');
+
+    const nombresEsperados = [...rutas]
+      .map((ruta) => ruta.nombre)
+      .sort((a, b) => a.localeCompare(b, 'es'));
+
+    assert.deepEqual(
+      resultado.map((ruta) => ruta.nombre),
+      nombresEsperados
+    );
+  });
+
+  test('ordena las rutas por precio de menor a mayor', () => {
+    const resultado = ordenarRutas(rutas, 'precio');
+
+    assert.equal(resultado[0].precio, 0);
+  });
+
+  test('ordena las rutas por duracion de menor a mayor', () => {
+    const resultado = ordenarRutas(rutas, 'duracion');
+
+    assert.ok(resultado[0].duracionHoras <= resultado[1].duracionHoras);
+  });
+
+  test('no modifica la lista original', () => {
+    const original = [...rutas];
+
+    ordenarRutas(rutas, 'precio');
+
+    assert.deepEqual(rutas, original);
+  });
+
+  test('un criterio desconocido devuelve una copia en el mismo orden', () => {
+    const resultado = ordenarRutas(rutas, 'otro');
+
+    assert.deepEqual(resultado, rutas);
+    assert.notEqual(resultado, rutas);
+  });
 });
