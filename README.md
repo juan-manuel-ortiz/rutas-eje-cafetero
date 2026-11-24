@@ -4,9 +4,9 @@ Catálogo de rutas turísticas del Eje Cafetero (Caldas, Risaralda y Quindío).
 Las tarjetas **no están escritas a mano**: JavaScript las construye a partir de los datos en `js/datos.js`,
 y se pueden filtrar por tipo y buscar por nombre o municipio.
 
-- **Aprendiz:** _tu nombre completo_
+- **Aprendiz:** Juan Manuel Ortiz Mena 
 - **Ficha:** 3349882 · Tecnólogo en Análisis y Desarrollo de Software · SENA CDITI
-- **Sitio publicado (GitHub Pages):** _pega aquí tu enlace https://TU-USUARIO.github.io/rutas-eje-cafetero/_
+- **Sitio publicado (GitHub Pages):** _pega aquí tu enlace https:https://juan-manuel-ortiz.github.io/rutas-eje-cafetero/
 
 - **Lo que aprendí:** ver [APRENDIZAJES.md](APRENDIZAJES.md)
 
