@@ -5,8 +5,8 @@ Las tarjetas **no están escritas a mano**: JavaScript las construye a partir de
 y se pueden filtrar por tipo y buscar por nombre o municipio.
 
 - **Aprendiz:** Juan Manuel Ortiz Mena 
-- **Ficha:** 3349882 · Tecnólogo en Análisis y Desarrollo de Software · SENA CDITI
-- **Sitio publicado (GitHub Pages):** _pega aquí tu enlace https:https://juan-manuel-ortiz.github.io/rutas-eje-cafetero/
+- **Ficha:** 3349882 · Tecnologo en Analisis y Desarrollo de Software · SENA CDITI
+- **Sitio publicado (GitHub Pages):** https://juan-manuel-ortiz.github.io/rutas-eje-cafetero/
 
 - **Lo que aprendí:** ver [APRENDIZAJES.md](APRENDIZAJES.md)
 
